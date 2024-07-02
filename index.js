@@ -11,6 +11,8 @@ const requestLogger = (request, response, next) => {
     next()
   }
 
+app.use(express.static('dist'))
+
 app.use(requestLogger)
 
 const cors = require('cors')
